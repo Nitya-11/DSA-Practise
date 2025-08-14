@@ -2,18 +2,27 @@ import java.util.*;
 
 public class ArrayCC {
 
-    public static int getLargest(int num[]) {
-        int largest = Integer.MIN_VALUE;
+    public static int binarySearch(int num[],int key) {
+        int start = 0, end = num.length-1;
 
-        for(int i=0;i<num.length;i++) {
-          if(largest<num[i]) {
-            largest = num[i];
+        while(start <= end) {
+          int mid = (start+end)/2;
+
+          if(num[mid] == key){
+            return mid;
+          }
+          if(num[mid] < key) {
+            start = mid + 1;
+          } else {
+            end = mid - 1;
           }
         }
-        return largest;
+
+        return -1;
     }
     public static void main(String args[]) {
        int num[] = {2,4,6,8,10,12,14,16};
-       System.out.println(getLargest(num));
+       int key = 14;
+       System.out.println(binarySearch(num, key));
     }
 }
