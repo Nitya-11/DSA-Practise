@@ -1,25 +1,33 @@
 import java.util.*;
 
 public class ArrayCC {
-
-  // Reverse of array 
-  public static void pairsArray(int num[]) {
-    int tp = 0;
-    for(int i=0;i<num.length;i++) {
-      int curr = num[i];
-
-      for(int j=i+1;j<num.length;j++) {
-        System.out.print("(" + curr + "," + num[j] + ")");
-        tp++;
-      }
-      System.out.println();
+  public static int trappedRainWater(int height[]) {
+    //left max array
+    int leftMax[] = new int[height.length];
+    leftMax[0] = height[0];
+    for(int i= 1;i < height.length;i++) {
+      leftMax[i] = Math.max(height[i],leftMax[i-1]);
     }
-    System.out.println("total pairs: "+tp);
+    //right max array
+    int rightMax[] = new int[height.length];
+    rightMax[height.length-1] = height[height.length-1];
+    for(int i = height.length-2;i >= 0; i--) {
+      rightMax[i] = Math.max(height[i], rightMax[i+1]);
+    }
+
+    //loop
+    int trappedWater = 0;
+    for(int i=0;i < height.length; i++) {
+      int waterlevel = Math.min(rightMax[i],leftMax[i]);
+      trappedWater += waterlevel - height[i];
+    }
+    return trappedWater;
+    //waterlevel
+    //trappedrainwater
   }
 
 public static void main(String args[]) {
-  int num[] = {2,4,6,7,8,10};
-  pairsArray(num);
-}
-
+  int height[] = {-2,-3,4,-1,-2,1,5,-3};
+  System.out.println(trappedRainWater(height));
+ }
 }
