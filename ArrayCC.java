@@ -55,7 +55,7 @@ public class ArrayCC {
     }
     public static void main(String args[]) {
         int num[] = {8,4,3,1,9,2,5,7};
-        insertionSort(num);
+        Arrays.sort(num);
         printArr(num);
     }
 }
