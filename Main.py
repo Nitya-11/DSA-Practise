@@ -248,38 +248,93 @@
 # 234 ---- 432
 #reverse
 
-import random
+# import random
 
-num = random.randint(1,10)
+# num = random.randint(1,10)
 
-tries = 0
+# tries = 0
 
-while True:
-    guess = int(input("Please guess your number: "))
+# while True:
+#     guess = int(input("Please guess your number: "))
 
-    if num == guess:
-        tries += 1
-        print(f"you are right! and your guessing is {tries} tries")
+#     if num == guess:
+#         tries += 1
+#         print(f"you are right! and your guessing is {tries} tries")
 
-        break
-    elif num < guess:
-        print("Choose the lower number")
-        tries += 1
-    elif num > guess:
-        print("choose the upper number")
-        tries += 1
-    else:
-        tries +=1
-        print("sorry you are wrong!")
+#         break
+#     elif num < guess:
+#         print("Choose the lower number")
+#         tries += 1
+#     elif num > guess:
+#         print("choose the upper number")
+#         tries += 1
+#     else:
+#         tries +=1
+#         print("sorry you are wrong!")
 
 
+# def palindrome(str):
+#     rev = ""
+#     for i in range(len(str)-1,-1,-1): 
+#         rev = rev + str[i]  
+
+#     if rev == str:
+#         print("String is palindrome")
+#     else:
+#         print("not a palindrome")
+
+# palindrome("namaan")
+
+# a = [12,13,14,15,34,5]
+
+# print(dir(list))
+
+# l = [1,2,3,4,5]
+
+# l.append(6)
+# l.insert(1,0)
+# # l.extend()
+# l.clear()
+# l.index()
+
+# print(l)
+
+# Print positive and negative elements of an list.
+
+# l = [-45,67,12,-68,-69,34]
+
+# print("positive elements are ")
+# for i in l:
+#     if i>=0:
+#         print(i)
+
+# print("Negative elements are ")
+# for i in l:
+#     if i<0:
+#         print(i)  
+
+# Mean of List elements--
+# l = [1,2,3]
+
+# sum = 0
+# for i in range(len(l)):
+#     sum = sum + l[i]
+#     mean = sum/len(l)
+# print(mean)
+
+# find the greatest element and print its index too--
+
+l = [12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+
+largest = l[0]
+index = 0
+
+for i in range(len(l)):
+    if l[i] > largest:
+        largest = l[i]
+        index = i
+print(f"your largest number is {largest} at index {index}")
     
-
-
-
-
-
-
 
 
 
