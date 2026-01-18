@@ -324,28 +324,216 @@
 
 # find the greatest element and print its index too--
 
-l = [12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+# l = [12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
 
-largest = l[0]
-index = 0
+# largest = l[0]
+# index = 0
 
-for i in range(len(l)):
-    if l[i] > largest:
-        largest = l[i]
-        index = i
-print(f"your largest number is {largest} at index {index}")
+# for i in range(len(l)):
+#     if l[i] > largest:
+#         largest = l[i]
+#         index = i
+# print(f"your largest number is {largest} at index {index}")
+
+# find the second greatest element--
+# l = [12,16,13,19,17]
+
+# largest = l[0]
+# sec_largest = l[0]
+
+# for i in l:
+#     if i > largest:
+#         sec_largest = largest
+#         largest = i
+#     elif i > sec_largest:
+#         sec_largest = i
+# print(f"the largest value is {largest} and second largest value is {sec_largest}")
+
+# a = [12,13,14,15,11]
+
+# for i in range(len(a)-1):
+#     if a[i] < a[i+1]:
+#         continue
+#     else:
+#         print("your list is not sorted")
+
+# else:
+#     print("your list is sorted!")
+
+# a = (1,2,3,4,5)
+
+# index = a.index(5)
+# print(index)
+
+# count = a.count(5)
+
+# s = {1,2,3,4,5,5}
+# print(s)
+
+# print(s[0])
+
+# a = {1,2,"hello",3,4,5}
+
+# for i in a:
+#     print(i)
+
+# a = {1,2,3,4,5,6}
+
+# a.remove(2)
+# print(a)
+
+# a.clear()
+# print(a)
+
+
+#DICTIONARY--- in python (hashmap)
+
+
+# d = {10:100,20:200,30:300,40:400,50:500}
+
+# print(d.items())
+
+# # important -- (deep copy)--
+# a = [1,2,3,4,5]
+
+# b = a.copy()    # shallow copy
+# b[0] = 100
+# print(a)
+
+# print()
+
+# d1 = {10:100,20:200,30:300}
+# d2 = {40:400,50:500,60:600}
+
+# for i in d2:
+#     d1[i] = d2[i]
+# print(d1)
+
+# a = [1,1,2,3,2,2,3,3,4,4,4,5,5,5,5,6,6,6]
+# d = {}
+
+# for i in a:
+#     if i in d.keys():
+#         d[i] +=1
+#     else:
+#         d[i] = 1 
+
+# d1 = {10:100,20:200,40:300}
+# d2 = {40:400,50:500,60:600}
+
+# for i in d2:
+#     if i in d1.keys():
+#         d1[i] += d2[i] 
+#     else:
+#         d1[i] = d2[i]
+
+# a = int(input("Tell your number -- "))
+
+# Exception Handeling --
+
+
+
+# age = int(input("tell your age : "))
+
+# try:
+#     if age < 10 or age > 18:
+#         raise ValueError("your age must be between 10 and 18")
+#     else:
+#         print("Welcome to the club")
+
+# except Exception as err:
+#     print(f"an error occured as {err}")
+
+# print("The club will start soon")
+
+# ---- File Handeling ------
+
+
+# r = open("superman.txt",'a')
+# r.write("and now appending some content inside the file")
+
+#----OOPs ---
+
+# class Factory:
+#     def __init__(self,material,zips,pockets):
+#         self.material = material
+#         self.zips = zips
+#         self.pockets = pockets
     
+#     def show(self):
+#         print(f"your object details are {self.material},{self.pockets},{self.zips}")
+    
+# reebok = Factory("leather",3,2)
+# campus = Factory("nylon",3,3)
+
+# reebok.show()
 
 
+# class Animal:
+#     name = "lion"  
+    
+#     def __init__(self,age):
+#         self.age = age #instance attributes
+        
+#     def show(self):  
+#         print("how are you")
+        
+#     @classmethod
+#     def hello(cls):
+#         print("how are you brother")
+        
+# class Factorymumbai:     #parent class // superclass
+#     a = "I am an attributes mentioned inside factory"
+#     def hello(self):
+#         print("hello I am a method mentioned inside Factory")
+    
+# class Factorypune(Factorymumbai):   #child class // subclass
+#     pass
+
+# obj = Factorymumbai()
+
+# print(obj.a)
+      
+# class Factorymumbai:
+#     a = "I am an attribute mentioned inside Factory"
+#     def hello(self):
+#         print("Hello I am a method mentioned inside Factory")
+        
+# class Factorypune(Factorymumbai):
+#     pass      
+    
+# obj = Factorymumbai() 
+
+# obj2 = Factorypune()
+
+# print(obj2.hello())         
+
+#---- Constructor ----
+
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name  #instance attributes
+        
+#     def show(self):
+#         print(f"Hello your name is {self.name}")
+        
+# class Human(Animal):
+#     def __init__(self,name,age):
+#         super().__init__(name)
+#         self.age = age
+
+# person1 = Human("nitya") #object
 
 
-
-
-
-
-
-
-
-
-
+# --- OOPs-----
+class Factory:
+    a = 12  #attributes
+    
+    def hello():   #method
+        print("how are you")
+    
+    print("Hello how are you i am getting initialized")
+    
+obj = Factory() 
+obj = Factory()
 
